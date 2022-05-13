@@ -117,3 +117,7 @@ jobs:
 
     - name: Run psalm
       run: psalm --output-format=github
+
+    - name: Run phpstan
+      if: always()
+      run: vendor/bin/phpstan.phar analyse --error-format=github
